@@ -1,0 +1,209 @@
+{
+  "dataRoles": [
+    {
+      "name": "panelBy",
+      "kind": "Grouping",
+      "displayName": "Split Into Panels",
+      "description": "One separate panel is created for each unique value — e.g. Region"
+    },
+    {
+      "name": "groupBy",
+      "kind": "Grouping",
+      "displayName": "Group Into Tiles",
+      "description": "Items within each panel are grouped into labeled tile sections — e.g. Product Line"
+    },
+    {
+      "name": "label",
+      "kind": "Grouping",
+      "displayName": "Item Name",
+      "description": "The name of each individual leaf block — e.g. Task Name"
+    },
+    {
+      "name": "measure",
+      "kind": "Measure",
+      "displayName": "Block Size",
+      "description": "Numeric value that determines the relative size of each block — e.g. Units Sold"
+    },
+    {
+      "name": "colorBy",
+      "kind": "Grouping",
+      "displayName": "Color Category",
+      "description": "Categorical field whose values determine each block's color — e.g. Priority Level"
+    },
+    {
+      "name": "labelOverride",
+      "kind": "Grouping",
+      "displayName": "Block Display Name",
+      "description": "Optional friendly name shown inside blocks. Item Name is still used for cross-filtering; this only changes the displayed text."
+    },
+    {
+      "name": "tooltips",
+      "kind": "Measure",
+      "displayName": "Tooltips",
+      "description": "Extra fields shown when hovering over a block. Also enables report-page tooltips."
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "table": {
+        "rows": {
+          "select": [
+            { "for": { "in": "panelBy" } },
+            { "for": { "in": "groupBy" } },
+            { "for": { "in": "label" } },
+            { "for": { "in": "measure" } },
+            { "for": { "in": "colorBy" } },
+            { "for": { "in": "labelOverride" } },
+            { "for": { "in": "tooltips" } }
+          ]
+        }
+      }
+    }
+  ],
+  "objects": {
+    "colorSlot0":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot1":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot2":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot3":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot4":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot5":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot6":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot7":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot8":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot9":  { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot10": { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "colorSlot11": { "displayName": "Status Color", "properties": { "fill": { "displayName": "Color", "type": { "fill": { "solid": { "color": true } } } } } },
+    "panelTitle": {
+      "displayName": "Title",
+      "properties": {
+        "show":     { "displayName": "Show",      "type": { "bool": true } },
+        "fontSize": { "displayName": "Font Size", "type": { "formatting": { "fontSize": true } } },
+        "bold":     { "displayName": "Bold",      "type": { "bool": true } },
+        "align":    { "displayName": "Alignment", "type": { "enumeration": [
+          { "value": "left",   "displayName": "Left"   },
+          { "value": "center", "displayName": "Center" },
+          { "value": "right",  "displayName": "Right"  }
+        ]}},
+        "color":      { "displayName": "Font Color",       "type": { "fill": { "solid": { "color": true } } } },
+        "background": { "displayName": "Background Color", "type": { "fill": { "solid": { "color": true } } } }
+      }
+    },
+    "labels": {
+      "displayName": "Group Labels",
+      "properties": {
+        "show":      { "displayName": "Show",                          "type": { "bool": true } },
+        "showCount": { "displayName": "Show Count",                    "type": { "bool": true } },
+        "fontSize":  { "displayName": "Font Size",                     "type": { "formatting": { "fontSize": true } } },
+        "bold":      { "displayName": "Bold",                          "type": { "bool": true } },
+        "align":     { "displayName": "Alignment", "type": { "enumeration": [
+          { "value": "left",   "displayName": "Left"   },
+          { "value": "center", "displayName": "Center" },
+          { "value": "right",  "displayName": "Right"  }
+        ]}},
+        "color":       { "displayName": "Font Color",                    "type": { "fill": { "solid": { "color": true } } } },
+        "textOverflow":{ "displayName": "Text Overflow", "type": { "enumeration": [
+          { "value": "clip",     "displayName": "Clip"          },
+          { "value": "ellipsis", "displayName": "Truncate (…)"  },
+          { "value": "wrap",     "displayName": "Word Wrap"     },
+          { "value": "resize",   "displayName": "Resize to Fit" }
+        ]}},
+        "minHeight": { "displayName": "Min Tile Height to Show Label", "type": { "numeric": true } },
+        "minWidth":  { "displayName": "Min Tile Width to Show Label",  "type": { "numeric": true } }
+      }
+    },
+    "itemLabels": {
+      "displayName": "Item Labels",
+      "properties": {
+        "show":      { "displayName": "Show Name",  "type": { "bool": true } },
+        "showCount": { "displayName": "Show Count", "type": { "bool": true } },
+        "fontSize":  { "displayName": "Font Size",  "type": { "formatting": { "fontSize": true } } },
+        "bold":      { "displayName": "Bold",       "type": { "bool": true } },
+        "align":     { "displayName": "Alignment",  "type": { "enumeration": [
+          { "value": "left",   "displayName": "Left"   },
+          { "value": "center", "displayName": "Center" },
+          { "value": "right",  "displayName": "Right"  }
+        ]}},
+        "color":       { "displayName": "Font Color",  "type": { "fill": { "solid": { "color": true } } } },
+        "textOverflow":{ "displayName": "Text Overflow", "type": { "enumeration": [
+          { "value": "clip",     "displayName": "Clip"          },
+          { "value": "ellipsis", "displayName": "Truncate (…)"  },
+          { "value": "wrap",     "displayName": "Word Wrap"     },
+          { "value": "resize",   "displayName": "Resize to Fit" }
+        ]}},
+        "minWidth":  { "displayName": "Min Block Width to Show Label", "type": { "numeric": true } }
+      }
+    },
+    "legend": {
+      "displayName": "Legend",
+      "properties": {
+        "show":          { "displayName": "Show",           "type": { "bool": true } },
+        "position":      { "displayName": "Position",       "type": { "enumeration": [
+          { "value": "top",    "displayName": "Top"    },
+          { "value": "bottom", "displayName": "Bottom" },
+          { "value": "left",   "displayName": "Left"   },
+          { "value": "right",  "displayName": "Right"  }
+        ]}},
+        "fontSize":      { "displayName": "Font Size",      "type": { "formatting": { "fontSize": true } } },
+        "bold":          { "displayName": "Bold",           "type": { "bool": true } },
+        "color":         { "displayName": "Font Color",     "type": { "fill": { "solid": { "color": true } } } },
+        "showTitle":     { "displayName": "Show Title",     "type": { "bool": true } },
+        "titleFontSize": { "displayName": "Title Font Size","type": { "formatting": { "fontSize": true } } },
+        "titleBold":     { "displayName": "Title Bold",     "type": { "bool": true } },
+        "titleColor":    { "displayName": "Title Font Color","type": { "fill": { "solid": { "color": true } } } }
+      }
+    },
+    "grid": {
+      "displayName": "Grid",
+      "properties": {
+        "columns": { "displayName": "Columns (0 = proportional, N = grid)", "type": { "numeric": true } },
+        "padding": { "displayName": "Panel Padding (px)",                   "type": { "numeric": true } }
+      }
+    },
+    "values": {
+      "displayName": "Values",
+      "properties": {
+        "scale": {
+          "displayName": "Size Scale",
+          "type": {
+            "enumeration": [
+              { "value": "linear", "displayName": "Linear (exact)" },
+              { "value": "sqrt",   "displayName": "Square Root (recommended)" },
+              { "value": "log",    "displayName": "Logarithmic (most even)" }
+            ]
+          }
+        }
+      }
+    },
+    "detailPopup": {
+      "displayName": "Detail Popup",
+      "properties": {
+        "enabled": { "displayName": "Show detail popup on click", "type": { "bool": true } }
+      }
+    },
+    "tooltipBehavior": {
+      "displayName": "Tooltip Options",
+      "properties": {
+        "persistent": { "displayName": "Persistent (Sticky)",        "type": { "bool":    true } },
+        "maxHeight":  { "displayName": "Max Height (px)",            "type": { "numeric": true } }
+      }
+    },
+    "panelBorder": {
+      "displayName": "Panel Border",
+      "properties": {
+        "show":  { "displayName": "Show",       "type": { "bool": true } },
+        "width": { "displayName": "Width (px)", "type": { "numeric": true } },
+        "color": { "displayName": "Color",      "type": { "fill": { "solid": { "color": true } } } }
+      }
+    }
+  },
+  "supportsHighlight": true,
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": ["tooltips"],
+    "supportEnhancedTooltips": true
+  },
+  "privileges": []
+}

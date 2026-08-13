@@ -1,0 +1,40 @@
+{
+  "name": "pbiviz-smallmultiplestreemap",
+  "description": "A custom Power BI visual that renders a grid of D3 treemaps, one per unique combination of grouping field values.",
+  "version": "0.2.30.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illegal-request/PBIViz_SmallMultiplesTreeMap.git"
+  },
+  "author": "James Gleason <gleason.james@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package && node scripts/rename-output.js",
+    "lint": "npx eslint .",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/test/**/*.test.ts"
+    ]
+  },
+  "dependencies": {
+    "d3-hierarchy": "^3.1.2",
+    "powerbi-visuals-api": "~5.3.0",
+    "powerbi-visuals-utils-formattingmodel": "6.0.4"
+  },
+  "devDependencies": {
+    "@types/d3-hierarchy": "^3.1.7",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-powerbi-visuals": "^1.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.11",
+    "typescript": "5.5.4"
+  }
+}

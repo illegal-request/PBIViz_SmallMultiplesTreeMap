@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.tmp/
+webpack.statistics.prod.html
+*.pbiviz
+docs/superpowers/plans/
+docs/superpowers/specs/
